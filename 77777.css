@@ -1,0 +1,292 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #1a252f;
+    --text: #333;
+    --success: #27ae60;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header h1 span {
+    color: var(--secondary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+nav .current a {
+    color: var(--secondary);
+}
+
+#showcase {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.9));
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#showcase h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#showcase a {
+    display: inline-block;
+    background: var(--secondary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--secondary);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.card ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
+.card li:before {
+    content: "•";
+    color: var(--success);
+    position: absolute;
+    right: 0;
+}
+
+.fees .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.fees .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary);
+    margin: 1rem 0;
+}
+
+.fees .price span {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.fees .featured {
+    border-top-color: var(--accent);
+    position: relative;
+}
+
+.fees .badge {
+    position: absolute;
+    top: -10px;
+    background: var(--accent);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.fees button {
+    background: none;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.fees .primary {
+    background: var(--secondary);
+    color: white;
+}
+
+.notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.note {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.step {
+    display: flex;
+    gap: 1rem;
+}
+
+.number {
+    width: 40px;
+    height: 40px;
+    background: var(--secondary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.upload {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.upload label {
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: flex-end;
+}
+
+.actions button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.actions button[type="submit"] {
+    background: var(--secondary);
+    color: white;
+    border: none;
+}
+
+.actions button[type="reset"] {
+    background: none;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    #showcase h1 {
+        font-size: 2rem;
+    }
+    
+    .actions {
+        justify-content: center;
+    }
+}
